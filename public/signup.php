@@ -8,7 +8,7 @@ if(is_post_request()){
     $args=$_POST['student'] ?? '';
 
 $student= new Student($args);
- $result = $student->save();
+ $result = $student->create();
   if($result === true){
       $new_id = $student->id;
     $_SESSION['message']="Registeration Successful";

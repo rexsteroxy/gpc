@@ -80,9 +80,24 @@ protected function set_password(){
 public function verify_password($password){
  return password_verify($password,$this->password);
 }
-protected function create(){
+public function create(){
   $this->set_password();
-  return parent::create();
+ $sql = "INSERT INTO student (";
+ $sql .= "name, email, institution, department, matnumber, password";
+$sql .= ") VALUES (";
+$sql .= "'" . $this->name . "', ";
+$sql .= "'" . $this->email . "', ";
+$sql .= "'" . $this->institution . "', ";
+$sql .= "'" . $this->department . "', ";
+$sql .= "'" . $this->matnumber . "', ";
+$sql .= "'" . $this->password . "' ";
+$sql .= ")";
+$result = self::$database->query($sql);
+if($result){
+  $this->id = self::$database->insert_id;
+}
+return $result;
+
   }
 protected function update(){
     //validate password   
