@@ -43,7 +43,7 @@
     <div class="navbar-nav">
       <a class="nav-item nav-link active" href="<?php echo url_for('profile.php')?>">Home</a>
       <a class=" text-info nav-item nav-link"href="<?php echo url_for('/upload/stageone.php')?>">Upload Your Result</a>
-      <a class=" text-info nav-item nav-link"href="<?php echo url_for('/upload/stageone.php')?>">Edit Your Profile</a>
+      <a class=" text-info nav-item nav-link"href="<?php echo url_for('edit.php')?>">Edit Your Profile</a>
       <a class="text-danger nav-item nav-link" href="<?php echo url_for('logout.php')?>">Logout</a>
       
     </div>
