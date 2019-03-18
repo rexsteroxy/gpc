@@ -41,7 +41,7 @@ $result=$student->save();
             <div class="card-header">
             <div class="card-subtitle">
             <h4 class="text-success text-center">EDIT ADMINSTRATORS</h4>
-            <h5><a class="text-info" href="<?php echo url_for('/admin/staff/index.php')?>">&laquo; Back to List</a></h5>
+            
 
     <?php echo display_errors($student->errors);?>
 
