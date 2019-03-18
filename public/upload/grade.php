@@ -128,7 +128,7 @@ if(isset($_POST['register'])){
 <?php $page_title="Enter Result details"?>
 <?php include(SHARED_PATH . '/include_header.php');?>
 <div class="container-fluid">
-<h5><a class="text-danger" href="<?php echo url_for('/admin/upload/stageone.php')?>">
+<h5><a class="text-danger" href="<?php echo url_for('/upload/stageone.php')?>">
 Previous Page</a></h5>
 </div>
 

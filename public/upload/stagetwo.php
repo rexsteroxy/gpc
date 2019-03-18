@@ -1,7 +1,8 @@
 <?php 
 require_once("../../private/initialize.php");
 require_student_login();
-
+$id=$session->student_id;
+$student=Student::find_by_id($id);
 ?>
 <?php include(SHARED_PATH . '/include_header.php');?>
 <?php
@@ -12,7 +13,7 @@ if(isset($_POST['enter'])){
 <?php $number=$_POST['number'] ?? " ";?>
 <?php if($number<=20 AND $number>=0 ) { ?>
   <div class="container-fluid">
-<h5><a class="text-danger" href="<?php echo url_for('/admin/upload/stageone.php')?>">
+<h5><a class="text-danger" href="<?php echo url_for('/upload/stageone.php')?>">
 Previous Page</a></h5>
 </div>
 <div class="container-fluid">
@@ -26,10 +27,9 @@ Previous Page</a></h5>
       </div>
       <div class="card-body">
 <form action="grade.php" method="POST" class="form-group">
-              <div class="form-group">
-              <input name="mat_number" type="text" class="form-control mb-sm-3"
-              placeholder="Input Matric Number" required/>
-              </div>
+<select name="mat_number" type="text" class="btn btn-outline-success mt-sm-2">
+                      <option><?php echo $student->matnumber;?></option>
+  </select></br></br>
  <?php
  $num_courses= $_POST['number'] ?? "";
  for($i=1; $i<=$num_courses; $i++){?>
@@ -67,7 +67,7 @@ Previous Page</a></h5>
 <?php $errors[]="Please enter a course number less than 30";
 $errors[]="Please enter a positive number";
 ?>
-<a class="" href="<?php echo url_for('stageone.php')?>">
+<a class="" href="<?php echo url_for('/upload/stageone.php')?>">
 Previous Page<br></br><hr></a>
 <?php foreach($errors as $error){ ?>
   <ul>
