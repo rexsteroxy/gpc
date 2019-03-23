@@ -20,12 +20,12 @@ $student_result=GpObject::find_by_matnumber($matnumber);
 </div>
         <div class="container-fluid">
     <div class="row "> 
-        <div class="col-md-12 col-lg-12 col-sm-12">
+        <div class="col-md-5 col-lg-5 col-sm-2">
             <div class="card">
             <div class="card-header">
             <div class="card-subtitle">
             <h4 class="text-success text-center"><?php echo  h($student->name); ?></h4>
-            <h5><a class="text-info"  href="rexsteroxy.herokuapp.com">Powered by Rexsteroxy</a></h5>
+            <h5><a class="text-info"  href="">Powered by Rexsteroxy</a></h5>
                 <div id="attributes">
                 <table class="table table-striped table-bordered table-hover table-condensed text-center">
                     <tr>

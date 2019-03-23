@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <title>Js ninja</title>
+    <script type="text/javascript">
+        function change(){
+            var myValue = document.getElementById('myTextBox').value;
+
+            if (myValue == 0){
+                alert('Please enter a valid data');
+                return;
+            }
+            var myTitle = document.getElementById('title');
+            myTitle.innerHTML = myValue;
+        }
+    
+    </script>
+</head>
+<body onload="alert('welcome to my page')">
+    <h1 id="title">Template Page</h1>
+    <input type="text" id="myTextBox"/>
+    <input type="submit" value="click Me" onclick="change()"/>
+</body>
+</html>
